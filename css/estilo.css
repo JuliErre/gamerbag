@@ -1,0 +1,121 @@
+body {
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif ;
+    background-image: url(../assets/default_1920x1080.2.png);
+    background-attachment: fixed;
+    color: white;
+    margin-left: 15px;
+    margin-top: 15px;
+
+
+}
+
+
+nav{
+    
+    border-radius: 10px;
+    font-size: 1.3rem;
+    
+}
+
+
+img.pequena {
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin: 0 6px;
+}
+
+
+
+.info {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    margin-top: 20px;
+}
+
+.redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 15px;
+
+
+}
+nav{
+    margin-bottom: 5px;
+}
+
+
+
+.promo{
+    margin-top:15px;
+    margin-bottom: 15px;
+
+}
+
+footer{
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    
+}
+
+.padding{
+    padding: 0;
+}
+
+
+.productos{
+    margin-top: 100px;
+}
+
+.ofertas{
+    margin-top: 100px;
+}
+
+.datos{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows:70% 30%;
+
+}
+.nosotros{
+    margin-top: 100px;
+   
+
+}
+
+.formulario{
+    margin-top: 100px;
+}
+
+h1{
+    font-size: 3rem;
+    font-style: inherit ;
+    font-weight:700;
+    text-transform: uppercase;
+}
+
+h3{
+    font-size: 1rem;
+}
+
+.information{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin-top: 20px;
+}
+
+footer{
+    background-image: linear-gradient(91deg, rgb(71, 16, 193), rgb(117, 82, 255) 85%, rgb(129, 155, 253) 100%);
+    padding-top: 5px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+}
+
+.navbar-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
