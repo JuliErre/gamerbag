@@ -161,12 +161,32 @@ nav {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-#rowFooter{
+.rowFooter{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 .redes{
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+
+@media only screen and (min-width: 0px) and (max-width: 1500px){
+    .search{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 500px){
+    nav a img{
+        width: 200px;
+        height: 39px;
+    }
 }

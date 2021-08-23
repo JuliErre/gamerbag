@@ -44,8 +44,10 @@
                             </div>
                         </div>
                         <form class="form-inline">
+                            <div class="search">
                             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                                </div>
                         </form>
                     </nav>
                 </header>
@@ -97,11 +99,11 @@
                     </section>
                     <div class="rgbar"></div>
                     <div class="feed">
-                        <img src="assets/marcas.png" alt="marcas" id="marcas">
+                        <img src="assets/marcas.png" alt="marcas" id="marcas" class="img-fluid">
 
                     </div>
                     <div class="promoAmd">
-                        <img src="https://compragamer.net/novedades/imagen_ref_78_5306757.jpg" alt="promo, amd">
+                        <img src="https://compragamer.net/novedades/imagen_ref_78_5306757.jpg" alt="promo, amd" class="img-fluid">
                     </div>
 
                 </div>
@@ -111,23 +113,39 @@
 
     <footer>
         <div class="container-fluid">
-            <div class="row" >
-                <div class="col-lg-3 col-md-12 col-xs-12" id="rowFooter">
+            <div class="row justify-content-center" id="footerInfo" >
+                <div class="col-lg-2 col-md-12 col-xs-12 rowFooter" >
                     <div class="redes ">
                         <h3>Redes Sociales</h3>
 
                         <div class="logRedes">
                             <a href="https://www.facebook.com/compragamer/" target="_blank" class="face"><img
-                                    src="assets/facebook.png" alt="face" class="pequena" /></a>
+                                    src="assets/facebook.png" alt="face" class="pequena face" /></a>
                             <a href="https://www.instagram.com/compragamer_oficial/" target="_blank" class="insta">
-                                <img src="assets/instagram.png" alt="" class="pequena" /></a>
+                                <img src="assets/instagram.png" alt="" class="pequena insta" /></a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-12 col-xs-12">
+                <div class="col-lg-1 col-md-12 col-xs-12 rowFooter" >
                     <div class="tarjetas">
-                        <h3>TARJETAS ACEPTADAS</h3>
+                        <h3>Tarjetas</h3>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-12 col-xs-12 rowFooter" >
+                    <div class="ubicacion">
+                        <h3>Donde nos escontramos?</h3>
+                        <p>Estamos ubicados en salta 5033, Mendoza, Argentina.</p>
+                    
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-12 col-xs-12 rowFooter">
+                    <div class="help">
+                        <h3>Necesitas Ayuda?</h3>
+                        <a class="btn btn-outline-light bg-transparent" href="views/Ayuda.html" role="button">Ayuda</a>
+                    
                     </div>
                 </div>
 
@@ -136,6 +154,7 @@
         </div>
 
     </footer>
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
