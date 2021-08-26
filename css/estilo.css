@@ -154,21 +154,22 @@ nav {
 
 }
 
-.promoAmd{
+.promoAmd {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.rowFooter{
+
+.rowFooter {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
 }
 
-.redes{
+.redes {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -178,35 +179,25 @@ nav {
 
 
 
-@media only screen and (min-width: 0px) and (max-width: 1500px){
-    .search{
-        display: none;
-    }
-}
 
-@media only screen and (min-width: 0px) and (max-width: 500px){
-    nav a img{
-        width: 200px;
-        height: 39px;
-    }
-}
 
-#carruselNosotros{
+#carruselNosotros {
     margin: 15px;
 }
 
-div div h2{
+div div h2 {
     margin: 30px;
 }
 
-div div div div h1{
+div div div div h1 {
     margin-left: 100px;
 }
 
-.productos div{
+.productos div {
     padding: 15px;
-    background: white;  /* fallback for old browsers */
-    margin : 15px;
+    background: white;
+    /* fallback for old browsers */
+    margin: 15px;
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -215,51 +206,88 @@ div div div div h1{
 
 }
 
-.productos div img{
+.productos div img {
     border-style: solid;
     border-bottom-width: 3px;
     border-width: 0px 0px 3px 0;
-    border-color:black;
+    border-color: black;
+
 }
-.precio{
-    color:grey;
+
+.precio {
+    color: grey;
     font-size: 2.4rem;
     font-weight: 500;
-    
+
 }
 
-.descripcion{
-    
-    color:grey;
+.descripcion {
+
+    color: grey;
     font-size: 1.5rem;
     font-weight: 500;
-    
+
 
 }
 
 
 
-.btn-grad {background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF  51%, #ECE9E6  100%)}
 .btn-grad {
-   margin: 10px;
-   padding: 15px 45px;
-   text-align: center;
-   text-transform: uppercase;
-   transition: 0.5s;
-   background-size: 200% auto;
-   color: rgb(20, 2, 2);            
-   box-shadow: 0 0 20px #eee;
-   border-radius: 10px;
-   display: block;
-   border-style: none;
-   font-size: 1.3rem;
+    background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%)
+}
+
+.btn-grad {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: rgb(20, 2, 2);
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    border-style: none;
+    font-size: 1.3rem;
+
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+
+div h1 {
+    text-align: center;
+    margin: 15px;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 1500px) {
+    .search {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 700px) {
+    nav a img {
+        width: 200px;
+        height: 39px;
+    }
+
+    #form {
+        width: 300px;
+        height: 1430px;
+        
+    }
+    .mapa{
+        width: 100%;
+        height: 400px;
+    }
+    h1{
+        text-align: left;
+    }
     
- }
-
- .btn-grad:hover {
-   background-position: right center; /* change the direction of the change here */
-   color: #fff;
-   text-decoration: none;
- }
-
-
+}
