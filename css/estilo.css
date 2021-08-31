@@ -98,6 +98,15 @@ footer {
     margin-top: 15px;
 }
 
+.logRedes{
+    display: flex;
+    align-items: center;
+}
+
+.face{
+   margin-right: -15px;
+}
+
 .navbar-nav {
     display: flex;
     align-items: center;
