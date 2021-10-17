@@ -300,3 +300,71 @@ div h1 {
     }
     
 }
+
+.fas{
+    margin-left: 20px;
+}
+
+.carritoPage{
+    float: right;
+    width: 600px;
+    height: 100%;
+    max-width: 100%;
+    background-color:#1A1A1D;
+    position: fixed;
+    display: none;
+    right: 0;
+    z-index:1 ;
+    border-radius: 20px;
+    box-shadow: 50px
+}
+
+.carritoPage h3{
+    text-align: center;
+    font-size: 30px;
+    margin: 15px;
+}
+
+.productoCarrito{
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.productoCarrito img{
+    width:100px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.producto{
+    margin: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.datos{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.producto span{
+    font-size: 1.3rem;
+    
+}
+
+.producto p{
+    font-size: 1rem;
+
+}
+
+.cantidad{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    
+    
+    
+}

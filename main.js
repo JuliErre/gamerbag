@@ -45,12 +45,42 @@ const setCarrito = objeto => {
     const producto = {
         id: objeto.querySelector('.btn-grad').id,
         title: objeto.querySelector('p').textContent,
-        precio: objeto.querySelector('span').textContent
+        precio: objeto.querySelector('span').textContent,
+        img: objeto.querySelector('img').src,
+        cantidad: 1
 
     }
-    console.log(producto);
+    
+    if(carrito.hasOwnProperty(producto.id)){
+        producto.cantidad = carrito[producto.id].cantidad + 1
+      
 
+    }
+    
+
+    carrito[producto.id] = {...producto}
+    addCarrito(carrito);
+   // console.log(carrito);
 
 }
 
+
+const addCarrito = () =>{
+    $(".productoCarrito").html('');
+ Object.values(carrito).forEach(producto=>{
+        $(".productoCarrito").append('<div class="producto">    <div> <img src="'+producto.img +'" alt=""> </div>'+
+                                       '<div class"datos"> <h4>'+ producto.title +'</h4>'+
+                                       '<span>'+ producto.precio +'</span>'+
+                                       '<div class="cantidad"> <button class= "btn btn-info btn-sm"> + </button> <span> '+ producto.cantidad +'</span> <button class= "btn btn-danger btn-sm"> - </button> </div> </div> </div> '
+                                        )
+    })
+}
+
+
+
 getData(API);
+
+$(".fas").click( function() {
+    $(".carritoPage").fadeToggle("fast");
+  });
+  
