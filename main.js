@@ -4,8 +4,8 @@ let carrito = {};
 $(".head").hide();
 
 //se imprime el carrito del Local Storage
-$(document).ready(() =>{
-    if (localStorage.getItem('carrito')){
+$(document).ready(() => {
+    if (localStorage.getItem('carrito')) {
         carrito = JSON.parse(localStorage.getItem('carrito'))
         addCarrito();
     }
@@ -56,44 +56,34 @@ const printData = (data) => {
 
 //funcion por si se hace click en el boton de comprar
 $(".productos").click(e => {
-
-    //console.log(e.target)
-    //console.log(e.target.classList.contains('btn-grad'))
     if (e.target.classList.contains('btn-grad')) {
-        setCarrito(e.target.parentElement)
+        setCarrito(e.target.parentElement);
     }
     e.stopPropagation();
 })
 
-
+//funcion para el compartamiento de los botones + y - del carrito
 $(".carritoPage").click(e => {
 
-    //console.log(e.target)
-    //console.log(e.target.classList.contains('btn-info'))
+    //si se presiona el boton de + la cantidad aumenta 1 
     if (e.target.classList.contains('btn-info')) {
-        const producto = carrito[e.target.dataset.id]
-        //id = producto.querySelector('.producto').id;
-        // console.log(carrito[id].cantidad = carrito[id].cantidad + 1);
+        const producto = carrito[e.target.dataset.id];      
         producto.cantidad = carrito[e.target.dataset.id].cantidad + 1;
-        carrito[e.target.dataset.id] = { ...producto}
+        carrito[e.target.dataset.id] = { ...producto };
+
         addCarrito();
-
-
     }
+
+    //si se presiona el boton de - la cantidad disminuye 1 
     if (e.target.classList.contains('btn-danger')) {
-        const producto = carrito[e.target.dataset.id]
-        //id = producto.querySelector('.producto').id;
-        // console.log(carrito[id].cantidad = carrito[id].cantidad + 1);
+        const producto = carrito[e.target.dataset.id];
         producto.cantidad = carrito[e.target.dataset.id].cantidad - 1;
+        carrito[e.target.dataset.id] = { ...producto };
 
-        carrito[e.target.dataset.id] = {
-            ...producto
-        }
-
+        //si la cantidad es 0, el producto se borra del carrito 
         if (producto.cantidad === 0) {
-            delete carrito[e.target.dataset.id]
+            delete carrito[e.target.dataset.id];
         }
-
         addCarrito();
     }
 
@@ -127,14 +117,13 @@ const setCarrito = objeto => {
 
     // si el objeto ya existe en el carrito, se le suma uno a la cantidad
     if (carrito.hasOwnProperty(producto.id)) {
-        producto.cantidad = carrito[producto.id].cantidad + 1
+        producto.cantidad = carrito[producto.id].cantidad + 1;
 
 
     }
 
-    carrito[producto.id] = {...producto}
+    carrito[producto.id] = { ...producto }
     addCarrito();
-    // console.log(carrito);
 
 }
 
@@ -154,32 +143,31 @@ const addCarrito = () => {
         $(".head").hide();
 
     }
-    
+
     // si tiene elementos el carito aparecen los botones de arriba y el total 
     if (Object.keys(carrito).length > 0) {
         $(".head").show();
-        
+
         precioFinal = 0;
         // se recorren los objetos del carrito para sacar el precio final de la compra
         Object.values(carrito).forEach(producto => {
             aux = producto.precio * producto.cantidad;
             precioFinal = precioFinal + aux;
-           
+
         })
 
-        $(".precioTotal").html('<span>Total $'+ precioFinal +'</span>')
+        $(".precioTotal").html('<span>Total $' + precioFinal + '</span>');
 
     }
     //se guarda el carrito en el lcoalStorage
     localStorage.setItem('carrito', JSON.stringify(carrito));
 }
 
-
-
-
-
-getData(API);
-
+// funcion para ver y esconder el carrito de compras presionando la imagen del carrito
 $(".fas").click(function () {
     $(".carritoPage").fadeToggle("fast");
 });
+
+//se llama a la funcion de la api
+getData(API);
+
