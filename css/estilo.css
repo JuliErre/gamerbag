@@ -303,7 +303,9 @@ div h1 {
 
 .fas{
     margin-left: 20px;
+    cursor: pointer;
 }
+
 
 .carritoPage{
     float: right;
@@ -378,7 +380,8 @@ div h1 {
 }
 
 .precioTotal{
-    font-size: 1.2rem;
+    font-size: 1.7rem;
+    font-weight: 600;
     
 }
 
