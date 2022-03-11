@@ -1,7 +1,7 @@
 
 # Gamerbag
 
-Its a hardware e-commerce,in this page you can buy pc components, add to cart and more.
+It's a hardware e-commerce,in this page you can buy pc components, add to cart and more.
 
 ## Page link
 
